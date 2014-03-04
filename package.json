@@ -1,0 +1,16 @@
+{
+  "name": "ionode",
+  "version": "0.0.1",
+  "description": "API to control an Ion lamp (by Lava).",
+  "keywords": [
+    "ion",
+    "lamp",
+    "ionode"
+  ],
+  "author": "Eric Barch <eric.barch@lava.io>",
+  "main": "./lib/index.js",
+  "dependencies": {
+    "noble":     "0.2.x"
+  },
+  "engine": "node >= 1.0.0"
+}
