@@ -13,7 +13,7 @@ ion.on('ready', function() {
 	console.log('lamp ready');
 
 	// pulse pattern
-	ion.setPattern(5, function(err) {
+	ion.setPattern(0x12, function(err) {
 		if (!err) {
 			setHue();
 		}
@@ -24,7 +24,7 @@ ion.on('ready', function() {
 
 // begin hue infinite loop
 function setHue() {
-	ion.setPatternConfig(5, 1, currentHue, function(err) {
+	ion.setPatternConfig(0x12, 1, currentHue, function(err) {
 		if (!err) {
 			setTimeout(setHue(), 1000);
 		}
