@@ -13,22 +13,26 @@ ion.on('ready', function() {
 	console.log('lamp ready');
 
 	// pulse pattern
-	ion.setPattern(0x12, function(err) {
+	ion.setPattern(ionode.PATTERNS.Boost, function(err) {
 		if (!err) {
 			setHue();
 		}
 	});
-	
 });
 
 
 // begin hue infinite loop
 function setHue() {
-	ion.setPatternConfig(0x12, 1, currentHue, function(err) {
+	var config_id = 1;
+	var config_val = currentHue;
+
+	ion.setPatternConfig(ionode.PATTERNS.Boost, config_id, config_val, function(err) {
 		if (!err) {
-			setTimeout(setHue(), 1000);
+			setTimeout(setHue, 100);
 		}
 	});
+
+	// cycle the hue value
 	currentHue++;
 	if (currentHue > 359)
 		currentHue = 0;
