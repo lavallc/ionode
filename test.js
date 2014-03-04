@@ -9,6 +9,24 @@ ion.connect();
 var currentHue = 0;
 
 
+ion.on('discovered', function() {
+	console.log('lamp discovered');
+});
+
+ion.on('connected', function() {
+	console.log('connected');
+});
+
+ion.on('disconnected', function() {
+	console.log('disconnected');
+});
+
+ion.on('error', function(err) {
+	console.log('error: ' + err);
+});
+
+
+
 ion.on('ready', function() {
 	console.log('lamp ready');
 
