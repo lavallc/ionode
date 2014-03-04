@@ -26,8 +26,10 @@ function setHue() {
 	var config_id = 1;
 	var config_val = currentHue;
 
+	// set the pattern config - the callback function is executed after it has either been set or failed
 	ion.setPatternConfig(ionode.PATTERNS.Boost, config_id, config_val, function(err) {
 		if (!err) {
+			// call this function again in 100 ms
 			setTimeout(setHue, 100);
 		}
 	});
