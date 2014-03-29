@@ -31,7 +31,7 @@ ion.on('ready', function() {
 	console.log('lamp ready');
 
 	// pulse pattern
-	ion.setPattern(ionode.PATTERNS.Boost, function(err) {
+	ion.setPattern(ionode.PATTERNS.Plasma, function(err) {
 		if (!err) {
 			setHue();
 		}
@@ -45,7 +45,7 @@ function setHue() {
 	var config_val = currentHue;
 
 	// set the pattern config - the callback function is executed after it has either been set or failed
-	ion.setPatternConfig(ionode.PATTERNS.Boost, config_id, config_val, function(err) {
+	ion.setPatternConfig(ionode.PATTERNS.Plasma, config_id, config_val, function(err) {
 		if (!err) {
 			// call this function again in 100 ms
 			setTimeout(setHue, 100);
