@@ -10,7 +10,7 @@
   "author": "Eric Barch <eric.barch@lava.io>",
   "main": "./lib/index.js",
   "dependencies": {
-    "noble":     "0.2.x"
+    "noble":     "0.3.x"
   },
   "engine": "node >= 1.0.0"
 }
