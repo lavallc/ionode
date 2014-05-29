@@ -3,10 +3,8 @@ var ionode = require('./lib/index'),
 
 
 
+ion.setAutoReconnect(true);
 ion.connect();
-
-
-var currentHue = 0;
 
 
 ion.on('discovered', function() {
@@ -21,6 +19,10 @@ ion.on('disconnected', function() {
 	console.log('disconnected');
 });
 
+ion.on('reconnecting', function() {
+	console.log('reconnecting');
+});
+
 ion.on('error', function(err) {
 	console.log('error: ' + err);
 });
@@ -30,8 +32,7 @@ ion.on('error', function(err) {
 ion.on('ready', function() {
 	console.log('lamp ready');
 
-	// pulse pattern
-	ion.setPattern(ionode.PATTERNS.Plasma, function(err) {
+	ion.setMood('digital rain', function(err) {
 		if (!err) {
 			setHue();
 		}
@@ -40,15 +41,12 @@ ion.on('ready', function() {
 
 
 // begin hue infinite loop
-function setHue() {
-	var config_id = 1;
-	var config_val = currentHue;
+var currentHue = 0;
 
-	// set the pattern config - the callback function is executed after it has either been set or failed
-	ion.setPatternConfig(ionode.PATTERNS.Plasma, config_id, config_val, function(err) {
+function setHue() {
+	ion.setMoodConfig('digital rain', 'hue', currentHue, function(err) {
 		if (!err) {
-			// call this function again in 100 ms
-			setTimeout(setHue, 100);
+			setTimeout(setHue, 50);
 		}
 	});
 
