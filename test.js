@@ -32,7 +32,7 @@ ion.on('error', function(err) {
 ion.on('ready', function() {
 	console.log('lamp ready');
 
-	ion.setMood('digital rain', function(err) {
+	ion.setMood('digitalrain', function(err) {
 		if (!err) {
 			setHue();
 		}
@@ -44,7 +44,7 @@ ion.on('ready', function() {
 var currentHue = 0;
 
 function setHue() {
-	ion.setMoodConfig('digital rain', 'hue', currentHue, function(err) {
+	ion.setMoodConfig('digitalrain', 'hue', currentHue, function(err) {
 		if (!err) {
 			setTimeout(setHue, 50);
 		}
