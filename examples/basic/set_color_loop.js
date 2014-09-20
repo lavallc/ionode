@@ -6,7 +6,7 @@
  */
 
 // imports
-var ionode = require('../../lib/index');
+var ionode = require('ionode');
 
 
 // replace with your ION's name (default is 'ion')

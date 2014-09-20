@@ -6,7 +6,7 @@
  */
 
 // imports
-var ionode = require('../../lib/index'),
+var ionode = require('ionode'),
     os = require('os');
 
 
