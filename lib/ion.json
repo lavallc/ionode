@@ -670,7 +670,7 @@
 					"min": 0,
 					"max": 255,
 					"widget": "slider",
-					"default": 51,
+					"default": 125,
 					"label": ""
 				},
 				{

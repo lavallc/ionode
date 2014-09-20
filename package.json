@@ -1,6 +1,6 @@
 {
   "name": "ionode",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "API to control an ION lamp (by lava).",
   "keywords": [
     "ion",
@@ -13,5 +13,6 @@
     "noble":     "0.3.x",
     "request":   "2.42.x"
   },
+  "repository": "git@github.com:lavallc/ionode.git",
   "engine": "node >= 1.0.0"
 }
