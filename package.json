@@ -1,6 +1,6 @@
 {
   "name": "ionode",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "API to control an ION lamp (by lava).",
   "keywords": [
     "ion",
