@@ -234,7 +234,7 @@ ion.restoreCurrentMoodConfigsToDefault(function(err) {
 
 ## Raw Mode
 
-Raw mode allows you to manipulate each pixel to your heart's content. Ionode uses an internal buffer to hold onto LED state. Only after calling setRawShow() will your changes appear (unless you use setRawClearAll and setRawFillColor, those update immediately).
+Raw mode allows you to manipulate each pixel to your heart's content. Ionode uses an internal buffer to hold onto LED state. Only after calling setRawShow() will your changes appear (unless you use setRawClearAll or setRawFillColor, those update immediately).
 
 
 ### ion.setRawLED(ledIndex, {r: ?, g: ?, b: ?})
@@ -298,7 +298,7 @@ ion.beginWeatherUpdates("43.00", "-83.00");
 
 Displays a notification on ION. Callback consists of only an error parameter (null if no error). Parameters are as follows:
 
-  * notificationName (halo, spin, or glow)
+  * notificationName ('halo', 'spin', or 'glow')
   * hue (0-360)
   * brightness (0-255)
   * saturation (0-255)
