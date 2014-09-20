@@ -35,7 +35,8 @@ ion.on('ready', function() {
       console.log('set mood digitalrain!');
     }
   });
-});```
+});
+```
   
 
 ## Events
@@ -80,7 +81,8 @@ ion.on('ready', function() {
   console.log('init complete, ion ready');
 });
 
-ion.connect();```
+ion.connect();
+```
 
 
 ## Connection
@@ -88,12 +90,14 @@ ion.connect();```
 After creating your ion object using 'createLamp', simply call connect.
 
 ```javascript
-ion.connect();```
+ion.connect();
+```
 
 Disconnecting is achieved as one would imagine.
 
 ```javascript
-ion.disconnect();```
+ion.disconnect();
+```
 
 ## ion.getName()
 
@@ -126,7 +130,8 @@ Give the specified ION a new name. Callback returns 2 parameters:
 ion.renameDevice('roflcopter', function(err, newName) {
   if (!err)
     console.log('success!');
-}```
+}
+```
 
 
 ## ion.setMood(moodName, callback)
@@ -140,7 +145,8 @@ Sets the mood to the mood name provided. Callback returns 2 parameters:
 ion.setMood('lava', function(err, newMoodName) {
   if (!err)
     console.log('success!');
-}```
+}
+```
 
 See the end of this document for all possible moods.
 
@@ -152,7 +158,8 @@ Used for configs that have no value to be set. For instance, the Light mood supp
 ion.setMoodConfig('light', 'bluesky', function(err) {
   if (!err)
     console.log('beautiful blue skies');
-});```
+});
+```
 
 See the end of this document for all possible mood configs.
 
@@ -164,7 +171,8 @@ Used for configs that expect a value to be set. Callback consists of only an err
 ion.setMoodConfig('digitalrain', 'speed', 255, function(err) {
   if (!err)
     console.log('lickity split!');
-});```
+});
+```
 
 See the end of this document for all possible mood configs.
 
@@ -176,7 +184,8 @@ Currently only used for setting color of a mood. The first value is hue (0-360) 
 ion.setMoodConfig('digitalrain', 'color', 240, 255, function(err) {
   if (!err)
     console.log('proud to be blue');
-});```
+});
+```
 
 See the end of this document for all possible mood configs.
 
@@ -191,7 +200,8 @@ Returns the current value of the mood config. Callback returns 2 parameters:
 ion.getMoodConfig('rainbow', 'speed', function(err, val) {
   if (!err)
     console.log('rainbow speed is set to ' + val);
-}```
+}
+```
 
 ## ion.getRotation(callback)
 
@@ -208,7 +218,8 @@ Stores the current mood's configs to flash memory. After saving, power cycling I
 ion.saveMoodConfigs(function(err) {
   if (!err)
     console.log('damn, that is some fine saving');
-}```
+}
+```
 
 ## ion.restoreCurrentMoodConfigsToDefault([callback])
 
@@ -218,7 +229,8 @@ Returns the current mood's configs back to the factory default and commits to fl
 ion.restoreCurrentMoodConfigsToDefault(function(err) {
   if (!err)
     console.log('a fresh start');
-}```
+}
+```
 
 ## Raw Mode
 
@@ -233,7 +245,8 @@ The second parameter must be an object containing an r, g, and b value.
 
 ```javascript
 // the lonely red pixel
-ion.setRawLED(0, {r: 255, g: 0, b: 0});```
+ion.setRawLED(0, {r: 255, g: 0, b: 0});
+```
 
 
 ### ion.setRawShow([callback])
@@ -244,7 +257,8 @@ After using setRawLED(), your changes can be sent and displayed on your ION by u
 ion.setRawShow(function(err) {
   if (!err)
     console.log('pretty colors');
-});```
+});
+```
 
 
 ### ion.setRawClearAll([callback])
@@ -255,7 +269,8 @@ This call will set all LEDs to the 'off' state and immediately update ION. Callb
 ion.setRawClearAll(function(err) {
   if (!err)
     console.log('it all goes dark');
-});```
+});
+```
 
 
 ### ion.setRawFillColor({r: ?, g: ?, b: ?}, [callback])
@@ -266,7 +281,8 @@ This call will set all LEDs to the rgb values specified and immediately update I
 ion.setRawFillColor({r: 0, g: 0, b: 255}, function(err) {
   if (!err)
     console.log('not effing blue enough');
-});```
+});
+```
 
 
 ## ion.beginWeatherUpdates(latitude, longitude)
@@ -274,7 +290,8 @@ ion.setRawFillColor({r: 0, g: 0, b: 255}, function(err) {
 Tells ionode to begin sending weather data to ION every 15 minutes for the Weather and Thermometer moods.
 
 ```javascript
-ion.beginWeatherUpdates("43.00", "-83.00");;```
+ion.beginWeatherUpdates("43.00", "-83.00");
+```
 
 
 ## ion.showNotification(notificationName, hue, brightness, saturation, speed, duration, sticky, [callback])
@@ -294,7 +311,8 @@ Displays a notification on ION. Callback consists of only an error parameter (nu
 ion.showNotification('halo, 120, 255, 255, 40, 3, false, function(err) {
   if (!err)
     console.log('it bounces!');
-});```
+});
+```
 
 
 ## ion.clearNotification([callback])
@@ -305,7 +323,8 @@ Clears a sticky notification (if active). Callback consists of only an error par
 ion.clearNotification(function(err) {
   if (!err)
     console.log('and now back to your regularly scheduled programming');
-});```
+});
+```
 
 
 ## Mood List
