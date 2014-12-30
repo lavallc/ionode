@@ -9,13 +9,17 @@ First off, make sure you're using a Bluetooth 4.0 compatible adapter with your c
 
 ## Installation
 
-Once you've got Node.js up and running, it's as simple as...
-
-```npm install ionode```
-
-If you're setting Node.js up on your Raspberry Pi, we recommend following the guide here:
+First, you'll need a recent version of Node.js installed on your system. If you're setting Node.js up on your Raspberry Pi, we recommend following the guide here:
 
 https://learn.adafruit.com/raspberry-pi-hosting-node-red/setting-up-node-dot-js
+
+Once you've got Node.js up and running, it's as simple as...
+
+```
+sudo apt-get install bluetooth bluez-utils libbluetooth-dev
+mkdir ion && cd ion && npm install ionode
+sudo node node_modules/ionode/examples/set_color_loop.js
+```
 
 ## Basic usage
 
