@@ -18,7 +18,7 @@ Once you've got Node.js up and running, it's as simple as...
 ```
 sudo apt-get install bluetooth bluez-utils libbluetooth-dev
 mkdir ion && cd ion && npm install ionode
-sudo node node_modules/ionode/examples/set_color_loop.js
+sudo node node_modules/ionode/examples/basic/set_color_loop.js
 ```
 
 ## Basic usage
