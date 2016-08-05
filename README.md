@@ -41,7 +41,7 @@ ion.on('ready', function() {
   });
 });
 ```
-  
+
 
 ## Events
 
@@ -129,7 +129,7 @@ Give the specified ION a new name. Callback returns 2 parameters:
 
   1. error (null if no error)
   2. new name (the name just set)
-  
+
 ```javascript
 ion.renameDevice('roflcopter', function(err, newName) {
   if (!err)
@@ -144,7 +144,7 @@ Sets the mood to the mood name provided. Callback returns 2 parameters:
 
   1. error (null if no error)
   2. new mood name (the mood just set)
-  
+
 ```javascript
 ion.setMood('lava', function(err, newMoodName) {
   if (!err)
@@ -199,7 +199,7 @@ Returns the current value of the mood config. Callback returns 2 parameters:
 
   1. error (null if no error)
   2. new mood name (the mood just set)
-  
+
 ```javascript
 ion.getMoodConfig('rainbow', 'speed', function(err, val) {
   if (!err)
@@ -309,10 +309,10 @@ Displays a notification on ION. Callback consists of only an error parameter (nu
   * speed (0-255)
   * duration (0-10) seconds
   * sticky (true/false) if the notification must be acknowledged by tapping the top or calling clearNotification()
-  
+
 ```javascript
 // a friendly green bouncing disc
-ion.showNotification('halo, 120, 255, 255, 40, 3, false, function(err) {
+ion.showNotification('halo', 120, 255, 255, 40, 3, false, function(err) {
   if (!err)
     console.log('it bounces!');
 });
@@ -351,7 +351,7 @@ ion.clearNotification(function(err) {
   * rave
   * whirlpool
   * volume
-  
+
 
 ## Mood Config options
 
@@ -367,12 +367,12 @@ ion.clearNotification(function(err) {
   * brightness (0-255)
   * color (0-360 hue, 0-255 saturation)
   * lowglow (0-disabled, 1-enabled)
-  
+
 ### Flame
   * color (0-360 hue, 0-255 saturation)
   * inferno (0-disabled, 1-enabled)
   * enablesound (0-disabled, 1-enabled)
-  
+
 ### Light
   * candle (no parameters)
   * incandescent (no parameters)
@@ -382,22 +382,22 @@ ion.clearNotification(function(err) {
   * brightness (0-255)
   * color (0-360 hue, 0-255 saturation)
   * lowglow (0-disabled, 1-enabled)
-  
+
 ### DigitalRain
   * color (0-360 hue, 0-255 saturation)
   * speed (0-255)
-  
+
 ### Rainbow
   * speed (0-150)
   * brightness (0-255)
   * reverse (0-disabled, 1-enabled)
-  
+
 ### Weather
   * forecast (0-disabled, 1-enabled)
-  
+
 ### Thermometer
   * forecast (0-disabled, 1-enabled)
-  
+
 ### Hourglass
   * time (0-65535 seconds)
   * color (0-360 hue, 0-255 saturation)
@@ -409,12 +409,12 @@ ion.clearNotification(function(err) {
 ### Lines
   * color (0-360 hue, 0-255 saturation)
   * speed (0-255)
-  
+
 ### Plasma
   * color (0-360 hue, 0-255 saturation)
   * speed (0-150)
   * soundenabled (0-disabled, 1-enabled)
-  
+
 ### Sparkle
   * color (0-360 hue, 0-255 saturation)
   * speed (0-150)
@@ -424,14 +424,14 @@ ion.clearNotification(function(err) {
   * color (0-360 hue, 0-255 saturation)
   * speed (0-255)
   * brightness (0-255)
-  
+
 ### Fireworks
   * dominantcolor (0-360 hue, 0-255 saturation)
   * enablecolor (0-disabled, 1-enabled)
   * speed (0-255)
   * frequency (0-255)
   * soundenabled (0-disabled, 1-enabled)
-  
+
 ### Strobe
   * color (0-360 hue, 0-255 saturation)
   * colorenabled (0-disabled, 1-enabled)
