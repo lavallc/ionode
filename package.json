@@ -1,6 +1,6 @@
 {
   "name": "ionode",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "API to control an ION lamp (by lava).",
   "keywords": [
     "ion",
@@ -10,8 +10,8 @@
   "author": "Eric Barch <eric.barch@lava.io>",
   "main": "./lib/index.js",
   "dependencies": {
-    "noble": "^1.6.0",
-    "request": "^2.74.0"
+    "noble": "^1.9.1",
+    "request": "^2.85.0"
   },
   "repository": "git@github.com:lavallc/ionode.git",
   "engine": "node >= 1.0.0"
